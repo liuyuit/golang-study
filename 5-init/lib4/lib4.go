@@ -9,3 +9,7 @@ func init() {
 func Lib4Test() {
 	fmt.Println("lib4.Lib4Test ...")
 }
+
+func privateTest() {
+	fmt.Println("lib4.privateTest ...")
+}
