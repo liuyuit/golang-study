@@ -3,6 +3,9 @@ package main
 import "fmt"
 
 func main() {
+	// 切片就是指向底层数组头元素的指针
+	// 对于 slice 来说， len 表示当前切片中所有元素的个数，而 cap 是当前 slice 所指向的底层数组所能容纳的元素的个数。
+	// 如果当前 cap 不够用了，再去 append 会自动动态扩充底层数组的容量
 	var numbers = make([]int, 3, 5)
 	fmt.Printf("len=%d, cap=%d, %v \n", len(numbers), cap(numbers), numbers) // len=3, cap=5, [0 0 0]
 
