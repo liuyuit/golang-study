@@ -35,7 +35,7 @@ func main() {
 
 	var w Writer
 	//r: pair<type:Book, value:book{}地址>
-	w = r.(Writer) //此处的断言为什么会成功？ 因为w r 具体的type是一致
+	w = r.(Writer) //此处的断言为什么会成功？ 因为w r 具体的type是一致, Book 实现了 Reader 和 Writer
 
 	w.WriteBook()
 }
