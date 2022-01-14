@@ -24,6 +24,10 @@ func swap(pa *int, pb *int) {
 	*pb = temp
 }
 
+func test(str *string) {
+	fmt.Println(str, *str)
+}
+
 func main() {
 	var a int = 10
 	var b int = 20
@@ -41,4 +45,12 @@ func main() {
 
 	pp = &p
 	fmt.Println(pp, *pp, **pp)
+
+	var str string = "hello"
+	var pstr *string
+	pstr = &str
+
+	test(pstr)
+
+	fmt.Println(str, pstr, *pstr)
 }
